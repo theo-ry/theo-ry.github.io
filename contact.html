@@ -43,36 +43,28 @@
 
     <section id="contact-me">
         <div id="contact-intro">
-            <div class="width-50">
+            <div class="width-50 col">
                 <h2>Let's Talk</h2>
-                <p>Start a conversation by contacting me at theootan@gmail.com or filling up the form below :&#41;</p>
+                <p>Start a conversation by contacting me at <strong>theootan@gmail.com</strong> or filling up the form below :&#41;</p>
             </div>
 
-            <div class="-img">//relevant img</div>
+            <div id="contact-img" class="img"></div>
         </div>
 
         <div id="contact-form" class="card">
             <form action="https://formspree.io/f/xrgojgoq" method="POST">
-                <label>
-                    First Name
-                    <input type="text" name="name">
-                </label>
-                <label>
-                    Last Name
-                    <input type="text" name="last_name">
-                </label>
-                <label>
-                    Email
-                    <input type="text" name="_replyto">
-                </label>
-                <label>
-                    Message content
-                    <textarea name="message"></textarea>
-                </label>
+                <div id="fields">
+                    <div class="col">
+                        <input type="text" name="name" placeholder="First Name">
+                        <input type="text" name="last_name" placeholder="Last Name" class="margintop-2rem">
+                        <input type="text" name="_replyto" placeholder="Email" class="margintop-2rem">
+                    </div>
+                    <textarea name="message" placeholder="Message content"></textarea>
+                </div>
 
                 <!-- your other form fields go here -->
 
-                <button class="btn" type="submit">Send</button>
+                <button class="btn margintop-2rem" type="submit">Send</button>
             </form>
         </div>
     </section>
@@ -81,7 +73,7 @@
         <a href="index.html#project-1">Projects</a>
         <a href="about.html">About</a>
         <a href="contact.html">Say Hi</a>
-        <a class="totop" href="#mast">
+        <a class="totop" href="#contact-page">
             <ion-icon name="chevron-up-outline"></ion-icon> Back To Top
         </a>
         <a href="https://www.linkedin.com/in/theophelia-tan" class="circle-btn">

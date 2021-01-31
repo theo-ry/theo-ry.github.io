@@ -100,6 +100,8 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+
+
 /* NAV STYLES */
 .nav {
     position: sticky;
@@ -149,6 +151,10 @@ textarea {
     height: 90vh;
 }
 
+#getintouch {
+    background-image: url('../img/getintouch.svg');
+    height: 50%;
+}
 
 /* MAST STYLES */
 #mast {
@@ -158,14 +164,32 @@ textarea {
 
 #intro {
     width: 100%;
+    height: 50%;
     padding: 25vh 0;
 }
+
+#toprojs {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.blink {
+    animation: blink 0.5s infinite;
+    color: #77AFBD;
+}
+
+@keyframes blink {
+    to {
+        opacity: .0;
+    }
+}
+
 
 /* PROJECT STYLES */
 .proj-img {
     width: 35%;
-    height: 60%;
-    background: grey;
+    height: 65%;
     margin: 0 10% 0 5%;
 }
 
@@ -175,10 +199,28 @@ textarea {
     border-color: #FFB44D;
 }
 
+#project-1 .btn:hover {
+    color: #111111;
+    background: #FFB44D;
+}
+
+#proj-img-1 {
+    background-image: url(../img/proj1.svg);
+}
+
 #project-2 h5,
 #project-2 .btn {
     color: #D96086;
     border-color: #D96086;
+}
+
+#project-2 .btn:hover {
+    color: #111111;
+    background: #D96086;
+}
+
+#proj-img-2 {
+    background-image: url(../img/proj2.svg);
 }
 
 #project-3 h5,
@@ -187,10 +229,28 @@ textarea {
     border-color: #5C8A52;
 }
 
+#project-3 .btn:hover {
+    color: #111111;
+    background: #5C8A52;
+}
+
+#proj-img-3 {
+    background-image: url(../img/proj3.svg);
+}
+
 #project-4 h5,
 #project-4 .btn {
     color: #F0B561;
     border-color: #F0B561;
+}
+
+#project-4 .btn:hover {
+    color: #111111;
+    background: #F0B561;
+}
+
+#proj-img-4 {
+    background-image: url(../img/proj4.png);
 }
 
 #project-5 h5,
@@ -199,36 +259,58 @@ textarea {
     border-color: #98a6c4;
 }
 
+#project-5 .btn:hover {
+    color: #111111;
+    background: #98a6c4;
+}
+
+#proj-img-5 {
+    background-image: url(../img/proj5.png);
+}
+
 #project-6 h5,
 #project-6 .btn {
     color: #d62029;
     border-color: #d62029;
 }
 
-/* ABOUT PAGE STYLES */
-#about-me {
+#project-6 .btn:hover {
+    color: #111111;
+    background: #d62029;
+}
+
+#proj-img-6 {
+    background-image: url(../img/proj6.png);
+}
+
+
+/* ABOUT & CONTACT PAGE STYLES */
+#about-me,
+#contact-me {
     flex-flow: column;
     padding: 10vh 10vw;
 }
 
-#about-intro {
+#about-intro,
+#contact-intro {
     width: 100%;
     display: flex;
     flex-flow: row;
+    /*
     justify-content: space-between;
     align-content: center;
+*/
     margin-bottom: 15vh;
 }
 
-.about-img {
-    background: teal;
-    width: 40%;
+#about-img {
     height: auto;
-    margin-left: 10%;
+    background: teal;
+    /*    background-image: url('../img/');*/
 }
 
 #about-summary {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 5vh;
@@ -255,7 +337,7 @@ textarea {
 }
 
 #skills {
-    border-radius: 1em 0 0 1em;
+    border-radius: 2rem 0 0 2rem;
 }
 
 #software {
@@ -264,7 +346,7 @@ textarea {
 }
 
 #languages {
-    border-radius: 0 1em 1em 0;
+    border-radius: 0 2rem 2rem 0;
 }
 
 #about-summary .card {
@@ -273,8 +355,7 @@ textarea {
     width: 30%;
 }
 
-#contact-section {
-    background-color: #191919;
+#socials-section {
     padding: 10vh 10vw;
 }
 
@@ -295,25 +376,72 @@ textarea {
     height: 1.5rem;
 }
 
-#socials-img {
+#socials a:hover {
+    color: #111111;
+}
 
-    background: teal;
-    width: 40%;
+#socials-img {
+    background-image: url('../img/socials.svg');
     height: 50vh;
+}
+
+#getintouch,
+#about-img,
+#socials-img,
+#contact-img {
+    width: 40%;
     margin-left: 10%;
 }
 
 
-/*
-#contact-section i {
-    width: 10vw;
+/* CONTACT FORM STYLES */
+#contact-img {
+    background-image: url('../img/sayhi.svg');
+    height: 40vh;
+}
+
+#contact-form {
+    width: 90%;
+    border-radius: 2rem;
+    color: black;
     text-align: center;
 }
-*/
 
+form {
+    width: 100%;
+}
 
-/* CONTACT PAGE STYLES */
+form .btn {
+    background: #FFFFFF;
+    padding: 1.25rem 2rem;
+}
 
+form .btn:hover {
+    color: #FFFFFF;
+}
+
+#fields {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#fields > div,
+#fields > textarea {
+    width: 47%;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
+}
+
+textarea {
+    border: none;
+    border-bottom: 1px solid black;
+}
 
 /* PROJECT PAGES STYLES */
 
@@ -383,7 +511,6 @@ p {
     background-color: #77AFBD;
 }
 
-
 a,
 .btn {
     font-size: 0.8em;
@@ -393,6 +520,7 @@ a,
 section {
     padding: 0 10vw;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -407,8 +535,29 @@ section {
     display: flex;
 }
 
+.grey-bg {
+    background-color: #191919;
+}
 
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.margintop-2rem {
+    margin-top: 2rem;
+}
+
+strong {
+    color: #77AFBD;
+}
+
+.img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
 
 /* ==========================================================================
