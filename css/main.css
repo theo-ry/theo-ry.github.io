@@ -107,6 +107,7 @@ textarea {
     background: #111111;
     height: 10vh;
     overflow: hidden;
+    z-index: 1;
 }
 
 .logo {
