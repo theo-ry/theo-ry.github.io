@@ -12,9 +12,13 @@ $(function () {
     //    }
 
 
+    $('#menuicon').on('click', Showmenuopen);
+    $('#menuclose').on('click', Hidemenuopen);
+
     const words = ["A Web Designer", "A Web Developer", "A UI & UX Designer"];
     let i = 0;
     let timer;
+
 
     function typingEffect() {
         let word = words[i].split("");
@@ -24,11 +28,11 @@ $(function () {
             } else {
                 deletingEffect();
                 return false;
-            };
+            }
             timer = setTimeout(loopTyping, 200);
-        };
+        }
         loopTyping();
-    };
+    }
 
     function deletingEffect() {
         let word = words[i].split("");
@@ -41,15 +45,28 @@ $(function () {
                     i++;
                 } else {
                     i = 0;
-                };
+                }
                 typingEffect();
                 return false;
-            };
+            }
             timer = setTimeout(loopDeleting, 100);
-        };
+        }
         loopDeleting();
-    };
+    }
 
     typingEffect();
 
 });
+
+function Showmenuopen() {
+    $('#menu').css('display', 'grid');
+    $('#menuicon').css('display', 'none');
+    $('#menuclose').css('display', 'block');
+}
+
+//hide menuopen
+function Hidemenuopen() {
+    $('#menu').css('display', 'none');
+    $('#menuicon').css('display', 'block');
+    $('#menuclose').css('display', 'none');
+}
