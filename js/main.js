@@ -12,7 +12,7 @@ $(function () {
     //    }
 
 
-    const words = ["A Web Designer", "A Web Designer", "A Web Designer"];
+    const words = ["A Web Designer", "A Web Developer", "A UI & UX Designer"];
     let i = 0;
     let timer;
 

@@ -129,6 +129,7 @@ textarea {
     background-color: #4c8695;
     justify-content: space-between;
     font-size: 1em;
+    height: 8vh !important;
 }
 
 .totop {
@@ -288,11 +289,7 @@ textarea {
     width: 100%;
     display: flex;
     flex-flow: row;
-    /*
-    justify-content: space-between;
-    align-content: center;
-*/
-    margin-bottom: 15vh;
+    margin-bottom: 10%;
 }
 
 #about-img {
@@ -463,6 +460,7 @@ textarea {
 
     display: inline-block;
     height: auto;
+    margin-bottom: 10vh;
 }
 
 #gallery img {
@@ -485,6 +483,7 @@ textarea {
 
     display: inline-block;
     height: auto;
+    margin-bottom: 10vh;
 }
 
 #photos img {
@@ -621,8 +620,84 @@ strong {
 
 
 
+@media (max-width: 435px) {
+
+    #abt-intro-btns {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #abt-intro-btns .btn {
+        padding: 1.4rem 2rem;
+        margin: 0.5em 0;
+    }
+
+}
+
+@media (max-width: 655px) {
+
+    #abt-intro-btns {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #abt-intro-btns .btn {
+        padding: 1.4rem 2rem;
+        margin: 0.5em 0;
+    }
+
+
+    /*---foot styles---*/
+
+    .foot {
+        height: 25vh !important;
+        flex-direction: column;
+        padding: 10% 0;
+    }
+
+    .totop {
+        flex-grow: 0;
+    }
+
+}
+
 
 @media (max-width: 1000px) {
+
+    html {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+
+    /*---nav styles---*/
+
+
+
+
+
+    /*---homepage---*/
+
+    .proj-img {
+        width: 100%;
+        height: 45%;
+        margin: 0 0 5vh 0;
+    }
+
+
+    /*---project pages---*/
+
+    .projtopimg {
+        height: 45vh;
+    }
+
+    .desc2 {
+        margin: 8vh 0 0 0;
+    }
+
     #photos {
         -moz-column-count: 1;
         -webkit-column-count: 1;
@@ -635,17 +710,100 @@ strong {
         column-count: 2;
     }
 
-    .desc2 {
-        margin: 8vh 0 0 0;
+    #about-intro,
+    #contact-intro {
+        flex-wrap: wrap;
+    }
+
+    /*---about styles---*/
+
+    #about-summary {
+        flex-wrap: wrap;
+    }
+
+    #about-summary .card {
+        width: 100%
+    }
+
+    #skills {
+        border-radius: 2rem 2rem 0 0;
+    }
+
+    #software {
+        border-style: solid none solid none;
+    }
+
+    #languages {
+        border-radius: 0 0 2rem 2rem;
+    }
+
+
+    /*---contact styles---*/
+    #fields > div,
+    #fields > textarea {
+        width: 100%;
+    }
+
+    #fields > textarea {
+        height: 20vh;
+    }
+
+    input[type=text] {
+        margin-bottom: 2rem;
+    }
+
+    /*---reusable styles---*/
+
+    h1,
+    h2,
+    h5 {
+        line-height: 1;
+        margin: 1rem 0 0 0;
+    }
+
+    .card {
+        padding: 15%;
     }
 
     .width-50 {
         width: 100%;
     }
 
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .margintop-2rem {
+        margin-top: 1.5rem;
+    }
+
+    #getintouch,
+    #about-img,
+    #socials-img,
+    #contact-img,
+    .projtopimg,
+    .desc2 {
+        width: 100%;
+        margin-left: 0;
+    }
+
 
 }
 
+
+@media (min-width: 1650px) {
+    section {
+        padding: 0 30vw;
+    }
+
+    #about-me,
+    #contact-me,
+    #socials-section {
+        padding: 10vh 30vw;
+    }
+
+    .col {}
+}
 
 
 
