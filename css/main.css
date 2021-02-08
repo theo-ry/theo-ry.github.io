@@ -811,6 +811,7 @@ strong {
 
     #fields > textarea {
         height: 20vh;
+        margin-top: 1.5rem;
     }
 
     input[type=text] {
