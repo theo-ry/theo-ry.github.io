@@ -695,7 +695,7 @@ strong {
     }
 
     #menu {
-        position: absolute;
+        position: fixed;
         top: 10vh;
         right: 0;
         padding: 5%;
